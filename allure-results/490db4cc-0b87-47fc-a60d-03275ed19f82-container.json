@@ -1,0 +1,1 @@
+{"uuid":"490db4cc-0b87-47fc-a60d-03275ed19f82","name":"platform.kpi.KpiTest","children":["68b7bbe2-c019-4829-b118-170517e9f064"],"befores":[{"name":"createContextAndPage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1676908325511,"stop":1676908325905}],"afters":[],"links":[],"start":1676908325490,"stop":1676908342036}

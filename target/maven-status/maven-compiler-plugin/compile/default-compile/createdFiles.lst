@@ -1,0 +1,5 @@
+platform\sections\homepage\KpiFilter.class
+helpers\PlaywrightHelper.class
+platform\pages\HomePage.class
+platform\pages\LoginPage.class
+platform\sections\homepage\KpiWidgets.class
