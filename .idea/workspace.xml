@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0beb2665-e621-400d-9039-51ab2ad7892f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/platform/InitTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/helpers/PlaywrightHelper.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/platform/kpi/KpiTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/testng.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/platform/pages/HomePage.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2Lja5kPvVlkR4wKF55CAfWE0YnD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.3368522" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CX\Candidates\CXP-Test-Automation\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CX\Candidates\CXP-Test-Automation\src\test" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="platform" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/mohammed.gesreha/AppData/Local/JetBrains/IdeaIC2021.2/temp-testng-customsuite.xml">
+    <configuration name="C:/Users/mohammed.gesreha/AppData/Local/JetBrains/IdeaIC2021.2/temp-testng-customsuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CXP-Test-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.kpi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$USER_HOME$/AppData/Local/JetBrains/IdeaIC2021.2/temp-testng-customsuite.xml" />
+      <option name="PACKAGE_NAME" value="platform.kpi" />
+      <option name="MAIN_CLASS_NAME" value="platform.kpi.KpiTest" />
+      <option name="METHOD_NAME" value="testOperationalKpiAlphabeticalSorting" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KpiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CXP-Test-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.kpi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="platform.kpi" />
+      <option name="MAIN_CLASS_NAME" value="platform.kpi.KpiTest" />
+      <option name="METHOD_NAME" value="testOperationalKpiAlphabeticalSorting" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KpiTest.testClinicalKpiAlphabeticalSorting" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CXP-Test-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.kpi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="platform.kpi" />
+      <option name="MAIN_CLASS_NAME" value="platform.kpi.KpiTest" />
+      <option name="METHOD_NAME" value="testClinicalKpiAlphabeticalSorting" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KpiTest.testKpialalpha" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CXP-Test-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.kpi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="platform.kpi" />
+      <option name="MAIN_CLASS_NAME" value="platform.kpi.KpiTest" />
+      <option name="METHOD_NAME" value="testKpialalpha" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KpiTest.testOperationalKpiAlphabeticalSorting" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="CXP-Test-Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.kpi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="platform.kpi" />
+      <option name="MAIN_CLASS_NAME" value="platform.kpi.KpiTest" />
+      <option name="METHOD_NAME" value="testOperationalKpiAlphabeticalSorting" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/mohammed.gesreha/AppData/Local/JetBrains/IdeaIC2021.2/temp-testng-customsuite.xml" />
+        <item itemvalue="TestNG.KpiTest" />
+        <item itemvalue="TestNG.KpiTest.testClinicalKpiAlphabeticalSorting" />
+        <item itemvalue="TestNG.KpiTest.testOperationalKpiAlphabeticalSorting" />
+        <item itemvalue="TestNG.KpiTest.testKpialalpha" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0beb2665-e621-400d-9039-51ab2ad7892f" name="Changes" comment="" />
+      <created>1676386769984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676386769984</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CXP_Test_Automation$App.ic" NAME="App Coverage Results" MODIFIED="1676409717573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>platform.example.*</FILTER>
+    </SUITE>
+  </component>
+</project>
