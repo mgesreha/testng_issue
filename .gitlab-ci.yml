@@ -9,6 +9,8 @@ tests:
   stage: test
   extends: .platform_job
   image: mcr.microsoft.com/playwright:v1.31.0-focal
+  before_script:
+    - mvn --version
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
   only:
