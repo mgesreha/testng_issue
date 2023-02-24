@@ -13,7 +13,6 @@ tests:
   image: mcr.microsoft.com/playwright:v1.31.0-focal
   before_script:
     - cat /etc/*-release
-    - docker ps
     - java -version
     - mvn -version
   script:
