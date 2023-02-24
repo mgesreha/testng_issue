@@ -13,9 +13,9 @@ tests:
   image: mcr.microsoft.com/playwright:v1.31.0-focal
   before_script:
     - cat /etc/*-release
-    - docker ps -a
-    - java --version
-    - mvn --version
+    - docker ps
+    - java -version
+    - mvn -version
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
   only:
