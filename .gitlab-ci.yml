@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/playwright:v1.31.0-focal
+image: node:16-alpine
 
 stages:
   - test
@@ -10,6 +10,7 @@ stages:
 tests:
   stage: test
   extends: .platform_job
+  image: mcr.microsoft.com/playwright:v1.31.0-focal
   before_script:
     - java --version
     - mvn --version
