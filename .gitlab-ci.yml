@@ -1,8 +1,13 @@
 stages:
   - test
 
+.platform_job:
+  tags:
+    - platform
+
 tests:
   stage: test
+  extends: .platform_job
   image: mcr.microsoft.com/playwright:v1.31.0-focal
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
