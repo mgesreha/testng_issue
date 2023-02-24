@@ -6,3 +6,5 @@ tests:
   image: mcr.microsoft.com/playwright:v1.31.0-focal
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
+  only:
+    - develop
