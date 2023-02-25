@@ -10,7 +10,7 @@ stages:
 tests:
   stage: test
   extends: .platform_job
-  image: mcr.microsoft.com/playwright:v1.31.0-focal
+  image: mcr.microsoft.com/playwright/java
   before_script:
     - cat /etc/*-release
     - java -version
