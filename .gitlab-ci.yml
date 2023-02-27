@@ -18,6 +18,7 @@ tests:
     - mvn -version
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
+    - - mvn allure:report
   artifacts:
     when: always
     paths:
