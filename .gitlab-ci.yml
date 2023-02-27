@@ -2,6 +2,7 @@ image: node:16-alpine
 
 stages:
   - test
+  - report
 
 .platform_job:
   tags:
@@ -23,3 +24,16 @@ tests:
       - target/allure-report
   only:
     - develop
+
+
+report:
+  stage: report
+  only:
+    - master
+  script:
+    - mkdir public
+    - mv target/allure-report/* public
+  artifacts:
+    when: always
+    paths:
+      - public
