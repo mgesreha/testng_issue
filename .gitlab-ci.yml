@@ -28,6 +28,7 @@ tests:
 
 report:
   stage: report
+  extends: .platform_job
   only:
     - master
   script:
