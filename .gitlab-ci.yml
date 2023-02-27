@@ -26,11 +26,11 @@ tests:
     - develop
 
 
-report:
+reporting:
   stage: report
   extends: .platform_job
   only:
-    - master
+    - develop
   script:
     - mkdir public
     - mv target/allure-report/* public
