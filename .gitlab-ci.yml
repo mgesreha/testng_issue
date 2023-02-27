@@ -17,5 +17,9 @@ tests:
     - mvn -version
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
+  artifacts:
+    when: always
+    paths:
+      - target/allure-report
   only:
     - develop
