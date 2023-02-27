@@ -2,7 +2,7 @@ image: node:16-alpine
 
 stages:
   - test
-  - report
+  # - report
 
 .platform_job:
   tags:
@@ -22,20 +22,20 @@ tests:
   artifacts:
     when: always
     paths:
-      - target/allure-report
+      - /builds/cx_rnd/cx-platform/test-automation/target/allure-results
   only:
     - develop
 
 
-reporting:
-  stage: report
-  extends: .platform_job
-  only:
-    - develop
-  script:
-    - mkdir public
-    - mv target/allure-report/* public
-  artifacts:
-    when: always
-    paths:
-      - public
+# reporting:
+#   stage: report
+#   extends: .platform_job
+#   only:
+#     - develop
+#   script:
+#     - mkdir public
+#     - mv target/allure-report/* public
+#   artifacts:
+#     when: always
+#     paths:
+#       - public
