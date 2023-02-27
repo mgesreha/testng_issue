@@ -18,11 +18,11 @@ tests:
     - mvn -version
   script:
     - mvn clean test -DsuiteXmlFile='testng.xml'
-    - - mvn allure:report
+    - - mvn io.qameta.allure:allure-maven:report
   artifacts:
     when: always
     paths:
-      - /builds/cx_rnd/cx-platform/test-automation/target/allure-results
+      - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
   only:
     - develop
 
