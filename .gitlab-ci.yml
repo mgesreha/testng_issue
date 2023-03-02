@@ -1,5 +1,3 @@
-image: node:16-alpine
-
 stages:
   - test
   # - report
@@ -23,6 +21,9 @@ tests:
     when: always
     paths:
       - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
+  trigger:
+    project: cx-platform/test-automation
+    branch: develop
   only:
     - develop
 
