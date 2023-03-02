@@ -1,8 +1,9 @@
 testing:
   stage: test
+  when: manual
   trigger:
-    project: test.yml
-    branch: develop
+    include:
+      - local: test.yml
     strategy: depend
 
 
