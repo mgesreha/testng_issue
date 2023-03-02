@@ -1,11 +1,30 @@
-testing:
-  stage: test
-  when: manual
-  trigger:
-    include:
-      - local: test.yml
-    strategy: depend
+image: node:16-alpine
 
+stages:
+  - test
+  # - report
+
+.platform_job:
+  tags:
+    - platform
+
+tests:
+  stage: test
+  extends: .platform_job
+  image: mcr.microsoft.com/playwright/java
+  before_script:
+    - cat /etc/*-release
+    - java -version
+    - mvn -version
+  script:
+    - mvn clean test -DsuiteXmlFile='testng.xml'
+    - - mvn io.qameta.allure:allure-maven:report
+  artifacts:
+    when: always
+    paths:
+      - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
+  only:
+    - develop
 
 # reporting:
 #   stage: report
