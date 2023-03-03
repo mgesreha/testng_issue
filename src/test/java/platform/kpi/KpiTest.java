@@ -54,7 +54,7 @@ public class KpiTest extends InitTest {
 
         System.out.println(kpiHeadersList);
         List<String> sortedKpiHeadersList= kpiHeadersList.stream().sorted().collect(Collectors.toList());
-        Assert.assertEquals(kpiHeadersList,sortedKpiHeadersList, "Kpis aren't sorted alphabetically as expected");
+        Assert.assertEquals("kpiHeadersList",sortedKpiHeadersList, "Kpis aren't sorted alphabetically as expected");
     }
 
 }
