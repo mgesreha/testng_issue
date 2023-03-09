@@ -32,7 +32,7 @@ tests:
     # - accepted_rate=80.00
     - echo "accepted rate is $accepted_rate"
     - echo "$pass_rate < $accepted_rate"
-    - if [ $pass_rate -lt $accepted_rate ]; then echo 111;1 else echo 2222; fi
+    - if [ $pass_rate -lt $accepted_rate ]; then exit 1; else echo "Success UI Tests run within accepted pass rate"; fi
   artifacts:
     when: always
     paths:
