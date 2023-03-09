@@ -16,7 +16,8 @@ tests:
     - cat /etc/*-release
     - java -version
     - mvn -version
-    - apk add --no-cache xmlstarlet
+    - apt-get update -y
+    - apt-get install -y xmlstarlet
   script:
     - echo "Start UI Test Cases execution"
     - mvn clean test -DsuiteXmlFile='testng.xml'
