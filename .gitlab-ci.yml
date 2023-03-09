@@ -16,7 +16,6 @@ variables:
 tests:
   stage: uitest
   extends: .platform_job
-  # image: mcr.microsoft.com/playwright/java
   before_script:
     - cat /etc/*-release
     - java -version
@@ -63,18 +62,5 @@ verify:
     - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" $CI_PROJECT_DIR/public/testng-results.xml)
     - total=$(xmlstarlet sel -t -v "/testng-results/@total" $CI_PROJECT_DIR/public/testng-results.xml)
     - pass_rate=$((pass*100/total))
-    - echo "Auto-Message] accepted rate is $accepted_rate , Pass rate is $pass_rate , Total TC is $total , Pass TC is $pass"
+    - echo "[Auto-Message] accepted rate is $accepted_rate , Pass rate is $pass_rate , Total TC is $total , Pass TC is $pass"
     - if [ $pass_rate -lt $accepted_rate ]; then echo "[Auto-Message] Failed UI Tests run below accepted pass rate"; exit 1; else echo "[Auto-Message] Success UI Tests run within accepted pass rate"; fi
-
-# reporting:
-#   stage: report
-#   extends: .platform_job
-#   only:
-#     - develop
-#   script:
-#     - mkdir public
-#     - mv target/allure-report/* public
-#   artifacts:
-#     when: always
-#     paths:
-#       - public
