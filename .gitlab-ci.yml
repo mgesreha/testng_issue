@@ -42,7 +42,7 @@ report:
   extends: .platform_job
   script:
     - mkdir public
-    - mv $CI_PROJECT_DIR/tests/target/surefire-reports/testng-results.xml public
+    - mv $CI_PROJECT_DIR/target/surefire-reports/testng-results.xml public
   artifacts:
     when: always
     paths:
@@ -60,8 +60,8 @@ verify:
     - apt-get update -y
     - apt-get install -y xmlstarlet
   script:
-    - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" $CI_PROJECT_DIR/report/testng-results.xml)
-    - total=$(xmlstarlet sel -t -v "/testng-results/@total" $CI_PROJECT_DIR/report/testng-results.xml)
+    - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" $CI_PROJECT_DIR/testng-results.xml)
+    - total=$(xmlstarlet sel -t -v "/testng-results/@total" $CI_PROJECT_DIR/testng-results.xml)
     - pass_rate=$((pass*100/total))
     - echo "Auto-Message] accepted rate is $accepted_rate , Pass rate is $pass_rate , Total TC is $total , Pass TC is $pass"
     - if [ $pass_rate -lt $accepted_rate ]; then echo "[Auto-Message] Failed UI Tests run below accepted pass rate"; exit 1; else echo "[Auto-Message] Success UI Tests run within accepted pass rate"; fi
