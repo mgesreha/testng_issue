@@ -16,16 +16,27 @@ tests:
     - cat /etc/*-release
     - java -version
     - mvn -version
+    - apk add --no-cache xmlstarlet
   script:
     - echo "Start UI Test Cases execution"
     - mvn clean test -DsuiteXmlFile='testng.xml'
     - mvn io.qameta.allure:allure-maven:report
+  after_script:
+    - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
+    - total=$(xmlstarlet sel -t -v "/testng-results/@total" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
+    - pass_rate=$(echo "scale=2; $pass / $total * 100" | bc)
+    # - accepted_rate=80.00
+    - if (( $(echo "$pass_rate < $accepted_rate" | bc -l) )); then exit 1; fi
   artifacts:
     when: always
     paths:
       - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
+      - /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml
+    expire_in: 1 week
   only:
     - develop
+
+
 
 # reporting:
 #   stage: report
