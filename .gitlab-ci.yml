@@ -1,4 +1,4 @@
-image: node:16-alpine
+image: mcr.microsoft.com/playwright/java
 
 stages:
   - uitest
@@ -16,7 +16,7 @@ variables:
 tests:
   stage: uitest
   extends: .platform_job
-  image: mcr.microsoft.com/playwright/java
+  # image: mcr.microsoft.com/playwright/java
   before_script:
     - cat /etc/*-release
     - java -version
