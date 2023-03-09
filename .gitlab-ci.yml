@@ -34,8 +34,8 @@ tests:
     - pass_rate=$((pass*100/total))
     - echo "Pass rate is $pass_rate"
     - echo "accepted rate is $accepted_rate"
-    - if [ $pass_rate -lt $accepted_rate ]; then exit 1; else echo "Success UI Tests run within accepted pass rate"; fi
-    - $?
+    - if [ $pass_rate -lt $accepted_rate ]; then echo "[Auto-Message] Failed UI Tests run below accepted pass rate"; exit 1; else echo "[Auto-Message] Success UI Tests run within accepted pass rate"; fi
+
   artifacts:
     when: always
     paths:
@@ -45,6 +45,19 @@ tests:
   only:
     - develop
 
+
+verify:
+  stage: test
+  extends: .platform_job
+  script:
+    - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
+    - echo "Pass TC is $pass"
+    - total=$(xmlstarlet sel -t -v "/testng-results/@total" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
+    - echo "Total TC is $total"
+    - pass_rate=$((pass*100/total))
+    - echo "Pass rate is $pass_rate"
+    - echo "accepted rate is $accepted_rate"
+    - if [ $pass_rate -lt $accepted_rate ]; then echo "[Auto-Message] Failed UI Tests run below accepted pass rate"; exit 1; else echo "[Auto-Message] Success UI Tests run within accepted pass rate"; fi
 
 
 # reporting:
