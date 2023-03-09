@@ -34,9 +34,7 @@ tests:
     - echo "Total TC is $total"
     - pass_rate=$((pass*100/total))
     - echo "Pass rate is $pass_rate"
-    # - accepted_rate=80.00
     - echo "accepted rate is $accepted_rate"
-
     - if [ $pass_rate -lt $accepted_rate ]; then exit 1; else echo "Success UI Tests run within accepted pass rate"; fi
   artifacts:
     when: always
