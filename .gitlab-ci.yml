@@ -48,6 +48,9 @@ tests:
 
 verify:
   stage: test
+  needs:
+    - job: tests
+      artifacts: true
   extends: .platform_job
   script:
     - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
