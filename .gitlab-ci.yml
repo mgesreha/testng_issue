@@ -8,6 +8,9 @@ stages:
   tags:
     - platform
 
+variables:
+  accepted_rate: 95
+
 tests:
   stage: test
   extends: .platform_job
