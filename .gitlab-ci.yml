@@ -1,7 +1,7 @@
 image: node:16-alpine
 
 stages:
-  - test
+  - uitest
   # - report
 
 .platform_job:
@@ -14,20 +14,17 @@ variables:
     description: "This variable to set the accepted pass rate"
 
 tests:
-  stage: test
+  stage: uitest
   extends: .platform_job
   image: mcr.microsoft.com/playwright/java
   before_script:
     - cat /etc/*-release
     - java -version
     - mvn -version
-    - apt-get update -y
-    - apt-get install -y xmlstarlet
   script:
     - echo "Start UI Test Cases execution"
     - mvn clean test -DsuiteXmlFile='testng.xml'
     - mvn io.qameta.allure:allure-maven:report
-
   artifacts:
     when: always
     paths:
@@ -39,18 +36,22 @@ tests:
 
 
 verify:
-  stage: test
+  stage: uitest
   needs:
     - job: tests
       artifacts: true
   extends: .platform_job
+  before_script:
+    - cat /etc/*-release
+    - java -version
+    - apt-get update -y
+    - apt-get install -y xmlstarlet
   script:
     - pass=$(xmlstarlet sel -t -v "/testng-results/@passed" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
     - total=$(xmlstarlet sel -t -v "/testng-results/@total" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
     - pass_rate=$((pass*100/total))
     - echo "Auto-Message] accepted rate is $accepted_rate , Pass rate is $pass_rate , Total TC is $total , Pass TC is $pass"
     - if [ $pass_rate -lt $accepted_rate ]; then echo "[Auto-Message] Failed UI Tests run below accepted pass rate"; exit 1; else echo "[Auto-Message] Success UI Tests run within accepted pass rate"; fi
-
 
 # reporting:
 #   stage: report
