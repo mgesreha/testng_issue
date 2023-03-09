@@ -9,7 +9,8 @@ stages:
     - platform
 
 variables:
-  accepted_rate: 95
+  accepted_rate:
+    value: "95"
 
 tests:
   stage: test
