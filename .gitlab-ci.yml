@@ -27,7 +27,7 @@ tests:
     - echo "Pass TC is $pass"
     - total=$(xmlstarlet sel -t -v "/testng-results/@total" /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml)
     - echo "Total TC is $total"
-    - pass_rate=(($pass*100/$total))
+    - pass_rate=$((pass*100/total))
     - echo "Pass rate is $pass_rate"
     # - accepted_rate=80.00
     - echo "accepted rate is $accepted_rate"
