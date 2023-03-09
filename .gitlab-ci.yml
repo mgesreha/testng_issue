@@ -43,7 +43,6 @@ verify:
   extends: .platform_job
   before_script:
     - cat /etc/*-release
-    - java -version
     - apt-get update -y
     - apt-get install -y xmlstarlet
   script:
