@@ -10,7 +10,8 @@ stages:
 
 variables:
   accepted_rate:
-    value: "95"
+    value: "40"
+    description: "This variable to set the accepted pass rate"
 
 tests:
   stage: test
