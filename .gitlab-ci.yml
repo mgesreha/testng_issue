@@ -2,7 +2,6 @@ image: mcr.microsoft.com/playwright/java
 
 stages:
   - uitest
-  # - report
 
 .platform_job:
   tags:
@@ -41,12 +40,12 @@ report:
   extends: .platform_job
   script:
     - mkdir public
+    - mv $CI_PROJECT_DIR/target/site/allure-maven-plugin public
     - mv $CI_PROJECT_DIR/target/surefire-reports/testng-results.xml public
   artifacts:
     when: always
     paths:
       - public  
-
 
 verify:
   stage: uitest
