@@ -26,7 +26,7 @@ tests:
   artifacts:
     when: always
     paths:
-      - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
+      - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin/*
       - /builds/cx_rnd/cx-platform/test-automation/target/surefire-reports/testng-results.xml
     expire_in: 1 week
   only:
@@ -40,10 +40,11 @@ report:
   extends: .platform_job
   script:
     - mkdir public
-    - mv $CI_PROJECT_DIR/target/site/allure-maven-plugin public
+    - mv $CI_PROJECT_DIR/target/site/allure-maven-plugin/* public
     - mv $CI_PROJECT_DIR/target/surefire-reports/testng-results.xml public
   artifacts:
     when: always
+    expire_in: 1 week
     paths:
       - public  
 
