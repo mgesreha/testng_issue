@@ -20,7 +20,7 @@ tests:
     - java -version
     - mvn -version
   script:
-    - echo "Start UI Test Cases execution"
+    - echo "[Auto-Message] Start UI Test Cases execution"
     - mvn clean test -DsuiteXmlFile='testng.xml'
     - mvn io.qameta.allure:allure-maven:report
   artifacts:
