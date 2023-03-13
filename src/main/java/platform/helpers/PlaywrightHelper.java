@@ -1,4 +1,4 @@
-package helpers;
+package platform.helpers;
 
 import com.microsoft.playwright.*;
 

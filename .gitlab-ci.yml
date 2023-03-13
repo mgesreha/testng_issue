@@ -20,8 +20,12 @@ tests:
     - echo "Start UI Test Cases execution"
     - mvn clean test -DsuiteXmlFile='testng.xml'
     - mvn io.qameta.allure:allure-maven:report
+    //using bash calculate percentage of number to the total number
+
   artifacts:
     when: always
+    expire_in: 1 week
+
     paths:
       - /builds/cx_rnd/cx-platform/test-automation/target/site/allure-maven-plugin
   only:

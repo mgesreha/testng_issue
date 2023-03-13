@@ -35,7 +35,7 @@ public class KpiTest extends InitTest {
         Assert.assertEquals(kpiHeadersList,sortedKpiHeadersList, "Kpis aren't sorted alphabetically as expected");
     }
 
-    @Test(description = "Test Kpi Clinical Alphabetical Sorting")
+    @Test(description = "Test Kpi Operationa Alphabetical Sorting")
     public void testOperationalKpiAlphabeticalSorting(){
 
         page.navigate("https://platform.dev.happysurgeon.com/");
