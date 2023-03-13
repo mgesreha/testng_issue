@@ -14,6 +14,7 @@ public class KpiTest extends InitTest {
     private String password ="Qa2021@1#";
 
     @Test(description = "Test Kpi Clinical Alphabetical Sorting")
+    @XrayTest(key = "PLATFORM-788")
     public void testClinicalKpiAlphabeticalSorting(){
 
         page.navigate("https://platform.dev.happysurgeon.com/");
@@ -36,6 +37,7 @@ public class KpiTest extends InitTest {
     }
 
     @Test(description = "Test Kpi Clinical Alphabetical Sorting")
+    @XrayTest(key = "PLATFORM-789")
     public void testOperationalKpiAlphabeticalSorting(){
 
         page.navigate("https://platform.dev.happysurgeon.com/");
