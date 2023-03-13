@@ -13,7 +13,6 @@ variables:
     description: "Accepted pass rate"
 
   testExecKey:
-    value: "PLATFORM-784"
     description: "XRAY Test Execution Ticket ID"
 
 tests:
