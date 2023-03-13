@@ -1,5 +1,6 @@
 package platform.kpi;
 
+import app.getxray.xray.testng.annotations.XrayTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import platform.InitTest;
@@ -56,7 +57,7 @@ public class KpiTest extends InitTest {
 
         System.out.println(kpiHeadersList);
         List<String> sortedKpiHeadersList= kpiHeadersList.stream().sorted().collect(Collectors.toList());
-        Assert.assertEquals(kpiHeadersList,sortedKpiHeadersList, "Kpis aren't sorted alphabetically as expected");
+        Assert.assertEquals("kpiHeadersList",sortedKpiHeadersList, "Kpis aren't sorted alphabetically as expected");
     }
 
 }
