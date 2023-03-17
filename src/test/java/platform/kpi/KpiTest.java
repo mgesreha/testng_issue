@@ -17,8 +17,6 @@ public class KpiTest extends InitTest {
     @Test(description = "Test Kpi Clinical Alphabetical Sorting")
     @XrayTest(key = "PLATFORM-788")
     public void testClinicalKpiAlphabeticalSorting(){
-
-        page.navigate("https://platform.dev.happysurgeon.com/");
         List<String> kpiHeadersList = new LoginPage(page)
                 .navigate()
                 .login(userName, password)
@@ -40,8 +38,6 @@ public class KpiTest extends InitTest {
     @Test(description = "Test Kpi Clinical Alphabetical Sorting")
     @XrayTest(key = "PLATFORM-789")
     public void testOperationalKpiAlphabeticalSorting(){
-
-        page.navigate("https://platform.dev.happysurgeon.com/");
         List<String> kpiHeadersList = new LoginPage(page)
                 .navigate()
                 .login(userName, password)

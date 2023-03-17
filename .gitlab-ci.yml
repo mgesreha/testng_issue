@@ -25,7 +25,8 @@ tests:
     - mvn -version
   script:
     - echo "[Auto-Message] Start UI Test Cases execution"
-    - mvn clean test -DsuiteXmlFile='testng.xml'
+    - mvn clean test -DsuiteXmlFile='testng.xml' -Dheadless=true
+    - echo "[Auto-Message] UI Test Cases execution is done"
     - mvn io.qameta.allure:allure-maven:report
   artifacts:
     when: always
