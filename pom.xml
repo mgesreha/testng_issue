@@ -145,8 +145,14 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure.maven}</version>
             </plugin>
-
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/test/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
     <!-- Allure reporting config in parent-->

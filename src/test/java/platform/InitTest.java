@@ -6,6 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import platform.listeners.CustomListeners;
+import platform.utils.PropertiesUtils;
 
 public class InitTest {
 
@@ -18,7 +19,7 @@ public class InitTest {
     protected static void launchBrowser(){
         CustomListeners.setAcceptedRate(40);
         playwright = Playwright.create();
-        browser= playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+        browser= playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(getHeadless()));
     }
 
     @BeforeMethod
@@ -37,6 +38,11 @@ public class InitTest {
     @AfterSuite
     protected static void closeBrowser(){
         playwright.close();
+    }
+
+
+    private static boolean getHeadless(){
+        return PropertiesUtils.getProperties("test.properties").getProperty("headless").equals("true");
     }
 }
 
